@@ -15,6 +15,8 @@ define([
     it('you should declare functions safely', function() {
       var val = answers.functions(true);
       expect(val).to.eql('a');
+      var val = answers.functions(false);
+      expect(val).to.eql('b');
     });
 
     it('you should use parseInt correctly', function() {
