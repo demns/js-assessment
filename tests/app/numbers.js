@@ -15,6 +15,8 @@ define([
       });
 
       it('you should be able to return the base10 representation of a binary string', function() {
+        expect(answers.base10('1100')).to.eql(12);
+        expect(answers.base10('1111')).to.eql(15);
         expect(answers.base10('11000000')).to.eql(192);
       });
 
