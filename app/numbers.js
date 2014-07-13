@@ -11,11 +11,11 @@ define(function() {
     },
 
     convertToBinary: function(num) {
-
+        
     },
 
     multiply: function(a, b) {
-
+        return parseFloat((a * b).toPrecision(10));
     }
   };
 });
