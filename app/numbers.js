@@ -6,7 +6,7 @@ define(function() {
         var str = num.toString(2),
             str64bit = new Array(65 - str.length).join('0') + str;
 
-        return parseInt(str64bit[64-bit]);
+        return parseInt(str64bit[64-bit], 10);
     },
 
     base10: function(str) {
