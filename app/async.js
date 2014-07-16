@@ -6,8 +6,29 @@ define([ 'jquery' ], function($) {
 
     },
 
-    manipulateRemoteData : function(url) {
+    manipulateRemoteData: function (url) {
+        return new Promise(function (resolve) {
+            var arr = [];
+            var req = new XMLHttpRequest();
+            req.open('GET', url);
 
-    }
+            req.onload = function () {
+                if (req.status === 200) {
+                    var response = req.response;
+                    var obj = JSON.parse(response);
+
+                    for (var i = 0; i < obj.people.length; i++) {
+                        arr.push(obj.people[i].name);
+                    }
+                    arr.sort();
+
+                    resolve(arr);
+                }
+            };
+
+            req.send();
+        });
+    },
+
   };
 });
