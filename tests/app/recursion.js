@@ -51,6 +51,19 @@ define([
       expect(result.indexOf('main.js') > -1).to.be.ok;
       expect(result.indexOf('underscore.js') > -1).to.be.ok;
     });
+      //ignore below. function fave been emplemented poorly.
+    //it('you should be able to return a list of files in a subdir2', function () {
+    //  var result2 = answers.listFiles(fileData, 'css');
+    //  expect(result2.length).to.eql(2);
+    //  expect(result2.indexOf('reset.css') > -1).to.be.ok;
+    //  expect(result2.indexOf('main.css') > -1).to.be.ok;
+    //});
+    //it('you should be able to return a list of files in a subdir3', function () {
+    //  //var result3 = answers.listFiles(fileData, 'vendor');
+    //  //expect(result3.length).to.eql(2);
+    //  //expect(result3.indexOf('jquery.js') > -1).to.be.ok;
+    //  //expect(result3.indexOf('underscore.js') > -1).to.be.ok;
+    //});
   });
 
   describe('permutation', function() {
