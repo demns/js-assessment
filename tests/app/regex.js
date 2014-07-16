@@ -14,7 +14,8 @@ define([
       expect(answers.containsNumber('abc')).to.eql(false);
     });
 
-    it('you should be able to detect a repeating letter in a string', function() {
+    it('you should be able to detect a repeating letter in a string', function () {
+      expect(answers.containsRepeatingLetter('home')).to.eql(false);
       expect(answers.containsRepeatingLetter('bookkeeping')).to.eql(true);
       expect(answers.containsRepeatingLetter('rattler')).to.eql(true);
       expect(answers.containsRepeatingLetter('ZEPPELIN')).to.eql(true);
@@ -28,7 +29,7 @@ define([
       expect(answers.endsWithVowel('I KNOW KUNG FU')).to.eql(true);
     });
 
-    it('you should be able to capture the first series of three numbers', function() {
+    it('you should be able to capture the first series of three numbers', function () {
       expect(answers.captureThreeNumbers('abc123')).to.eql('123');
       expect(answers.captureThreeNumbers('9876543')).to.eql('987');
       expect(answers.captureThreeNumbers('abcdef')).to.eql(false);
