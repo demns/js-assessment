@@ -8,6 +8,9 @@ define([
   describe('regular expressions', function() {
     it('you should be able to detect a number in a string', function() {
       expect(answers.containsNumber('abc123')).to.eql(true);
+      expect(answers.containsNumber('1abc')).to.eql(true);
+      expect(answers.containsNumber('a1bc')).to.eql(true);
+      expect(answers.containsNumber('123')).to.eql(true);
       expect(answers.containsNumber('abc')).to.eql(false);
     });
 

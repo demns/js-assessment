@@ -49,7 +49,22 @@ define(function() {
     },
 
     curryIt: function (fn) {
-       
+        //TODO:
+        var func = fn,
+            args = Array.prototype.slice.call(arguments, 1);  
+            count = fn.length;
+
+        return function (fn) {
+            args = args.concat(Array.prototype.slice.call(arguments));  
+            return function (fn) {
+                args = args.concat(Array.prototype.slice.call(arguments));  
+                return function (fn) {
+                    args = args.concat(Array.prototype.slice.call(arguments));  
+                    return func.apply(null, args.concat(Array.prototype.slice.call(arguments)));  
+                }
+            }
+        };
+
     }
   };
 });
